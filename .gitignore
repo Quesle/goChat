@@ -2,3 +2,4 @@ dist
 node_modules
 .vscode
 src/config/config.wx.ts
+package-lock.json

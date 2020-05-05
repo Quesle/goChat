@@ -21,9 +21,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "sha1": "^1.1.1",
-    "wechat": "^2.1.0",
-    "wechat-oauth": "^1.5.0",
+    "jssha": "^3.1.0",
     "koa": "^2.5.1",
     "koa-body": "^1.7.0",
     "koa-bodyparser": "^4.2.0",
@@ -36,7 +34,10 @@
     "koa-static": "^4.0.2",
     "lodash": "^4.17.10",
     "log4js": "^2.5.3",
-    "mongoose": "^5.0.17"
+    "mongoose": "^5.0.17",
+    "sha1": "^1.1.1",
+    "wechat": "^2.1.0",
+    "wechat-oauth": "^1.5.0"
   },
   "devDependencies": {
     "@types/node": "^12.12.35",

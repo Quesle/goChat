@@ -1,9 +1,8 @@
-import * as api from './wxApi';
-import Router from 'koa-router';
+// import * as api from './wxApi';
+import wxConfig from '../../config/config.wx';
 
 const newToken = 'HelloWeChat';
 
-const router = new Router();
 /*首次接入微信，验证url是否畅通*/
 //这里的路径设为wx,这里的token必须与微信后台一致
 export const wxGet = (req: IObject, res: IObject, next: any) => {
@@ -37,15 +36,10 @@ export const wxGet = (req: IObject, res: IObject, next: any) => {
 /*微信模块*/
 const wechat = require('wechat');
 /*改写*/
-const config = {
-  token: newToken,
-  appid: 'wx5a0ed165323df030',
-  appsecret: '0d4ef86da0db61d79b1a15cc9dfb5d62',
-  encodingAESKey: 'PBeEb1kgY5L4zh2xQnU6BYwW9B8Ej2rAlnOi9Ur7cEt',
-};
-export const wxUse = wechat(config)
+
+export const wxUse = wechat(wxConfig)
   .text(async (message: IObject, req: IObject, res: IObject, next: any) => {
-    const accessToken = await api.getAccessToken();
+    // const accessToken = await api.getAccessToken();
     /*接收文本时执行的操作*/
     if (message.Content === 'tp') {
       res.reply({
