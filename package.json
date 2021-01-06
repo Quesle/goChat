@@ -20,7 +20,7 @@
     "lint": "eslint . --ext .ts"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "jssha": "^3.1.0",
     "koa": "^2.5.1",
     "koa-body": "^1.7.0",
